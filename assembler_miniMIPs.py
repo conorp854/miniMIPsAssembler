@@ -58,7 +58,7 @@ for line in m_in:
         op = opcode[mcode[0]]
         rt = register[mcode[1]]
         rs = register[mcode[2]]
-        rd = format(int(mcode[2]), '04b')
+        rd = format(int(mcode[3]), '04b')
         
     hcode = format(int(op + rs + rt + rd, 2), '03x')
     h_out.write(hcode + '\n')
